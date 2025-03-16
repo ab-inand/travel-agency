@@ -467,3 +467,31 @@ function cityToursAnimation() {
     opacity: 0,
     stagger: 0.1
   });
+
+function animateTestimonials() {
+    gsap.from(".testimonial", {
+        scrollTrigger: {
+            trigger: ".testimonials",
+            start: "top 80%",
+            end: "bottom 60%",
+            scroller: "#main",
+            scrub: 0.5,
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.3,
+        duration: 1,
+        ease: "power2.out"
+    });
+}
+
+animateTestimonials();
+
+
+
+function showBookingForm(packageName) {
+    alert(`Thank you for your interest in the ${packageName} package! A booking form will open shortly.`);
+    console.log(`Booking initiated for: ${packageName}`);
+}
+
+
